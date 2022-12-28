@@ -12,6 +12,7 @@ export class MarienbadComponent {
     5,
     7
   ];
+
   currentPlayer = 1;
 
   nextPlayer() {
