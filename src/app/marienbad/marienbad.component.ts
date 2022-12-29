@@ -6,21 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./marienbad.component.css'],
 })
 export class MarienbadComponent {
-  gameBoard = [
-    1,
-    3,
-    5,
-    7
-  ];
+  gameBoard = [1, 3, 5, 7];
 
   currentPlayer = 1;
 
   nextPlayer() {
-    this.currentPlayer = 3-this.currentPlayer;
+    this.currentPlayer = 3 - this.currentPlayer;
   }
 
-  takeChips(row:number) {
-    if (this.gameBoard[row]  > 0) {
+  takeChips(row: number) {
+    console.log('takeChips ligne : ' + row);
+    if (this.gameBoard[row] > 0) {
       this.gameBoard[row] = Math.max(this.gameBoard[row] - 1, 0);
     }
   }
