@@ -1,8 +1,10 @@
 <h1>Marienbad</h1>
 <p>It is player {{ currentPlayer }}'s turn.</p>
 <table>
-  <tr *ngFor="let row of gameBoard">
-      <td (click)="takeChips(row)">{{ row }}</td><td><input type="number" max="{{gameBoard[row]}}"></td><td><button>Play</button></td>
+  <tr *ngFor="let row of gameBoard; index as i">
+    <td (click)="takeChips(i)">{{ row }}</td>
+    <td><input type="number" max="{{ gameBoard[i] }}" /></td>
+    <td><button>Play</button></td>
   </tr>
 </table>
 <button (click)="nextPlayer()">Next</button>
